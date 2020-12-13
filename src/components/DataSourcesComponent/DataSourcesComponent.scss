@@ -1,0 +1,88 @@
+.dataSources-component {
+  h4 {
+    margin-block-start: 0px;
+    margin-block-end: 10px;
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: 400;
+ }
+  .unstyled {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    
+  }
+
+  .styled-checkbox {
+    position: absolute;
+    opacity: 0; 
+    display: flex;
+    align-items: center;
+    & + label {
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 0;
+    }
+
+    & + label:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 15px;
+      height: 15px;
+      background: white;
+      border: 1px solid #f35429;
+      border-radius: 5px;
+    }
+
+    &:hover + label:before {
+      background: #f35429;
+    }
+    
+    &:focus + label:before {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    }
+
+    &:checked + label:before {
+      background: #f35429;
+    }
+    
+    &:disabled + label {
+      color: #b8b8b8;
+      cursor: auto;
+    }
+
+    &:disabled + label:before {
+      box-shadow: none;
+      background: #ddd;
+    }
+
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 9px;
+      background: white;
+      width: 2px;
+      height: 2px;
+      box-shadow: 
+        2px 0 0 white,
+        4px 0 0 white,
+        4px -2px 0 white,
+        4px -4px 0 white,
+        4px -6px 0 white,
+        4px -8px 0 white;
+      transform: rotate(45deg);
+    }
+  }
+}

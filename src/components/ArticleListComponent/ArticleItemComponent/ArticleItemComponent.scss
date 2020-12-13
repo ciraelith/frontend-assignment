@@ -1,0 +1,34 @@
+.articleItem-component {
+    display: flex;
+    margin-bottom: 10px;
+    .articleItem-image {
+        width: 150px;
+        height: 100px;
+    }
+    .articleItem-left {
+        width: 150px;
+    }
+    .articleItem-right {
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-grow: 1;
+        .articleItem-top {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .articleItem-header-h4 {
+                margin-top: 0px;
+                width: 75%;
+                text-align: justify;
+            }
+            .articleItem-span {
+                width: 25%;
+                text-align: right;
+                font-size: 14px;
+            }
+        }
+        .articleItem-bottom {
+            text-align: justify;
+        }
+    }
+}

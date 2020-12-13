@@ -1,0 +1,23 @@
+.sorting-component {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    .sort-type {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        text-decoration: underline;
+    }
+    .sort-buttons {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        flex-direction: column;
+        font-size: 20px;
+        margin-top: -10px;
+        .sort-button {
+            display: block;
+            margin-bottom: -10px;
+        }
+    }
+}
