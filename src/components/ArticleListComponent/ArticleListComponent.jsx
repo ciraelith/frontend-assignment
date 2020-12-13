@@ -9,6 +9,7 @@ class ArticleListComponent extends Component{
   
    render(){
       const { articles, sort } = this.props;
+      // maybe it would be better to move it up and keep this component as pure function
       const months = [
             {id: '01', name: 'januar'},
             {id: '02', name: 'februar'},
@@ -37,7 +38,6 @@ class ArticleListComponent extends Component{
          ? articlesListDates.sort((a,b) => b.convertedDate - a.convertedDate)
          : articlesListDates.sort((a,b) => a.convertedDate - b.convertedDate)
       : null;
-      console.log(sortedArticlesArray)
       return(
          <div>
            {!articles 

@@ -16,8 +16,9 @@ class App extends Component{
       }
       this.onChange= this.onChange.bind(this);
       this.onSortChange= this.onSortChange.bind(this);
-
     }
+
+    // id usually move it to views or make it a component, but for the sake of simplicity i kept the this logic here
    onChange(value) {
       this.setState({ source: value });
 
@@ -31,6 +32,7 @@ class App extends Component{
       this.fetchArticles(this.state.source);
     }
 
+    // could think of moving it to utils;
     fetchArticles(source){
          fetch(`http://localhost:6010/articles/${source}`, {
            method: 'GET',
@@ -49,6 +51,7 @@ class App extends Component{
     }
    render(){
       const { source, sort, articles } = this.state;
+      // maybe it could be better to use a grid of sort not to duplicate DataSourcesComponent and playing around with display property in css
       return(
          <div className="main-content">
             <div className="top-bar">
